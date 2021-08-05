@@ -8,10 +8,10 @@ resources:
       type: github
       # GitHub Repo(e.g. <FORK>/PowerAppsTestAutomation)
       # Recommended to Fork or Duplicate if custom auth flows are required
-      name: microsoft/PowerAppsTestAutomation
+      name: xiaocaiM/PowerAppsTestAutomation
       ref: master
       # Name of the GitHub OAuth ADO Service Connection
-      endpoint: <ADO GitHub OAuth Service Connection Name>
+      endpoint: github.com_xiaocaiM
 
 parameters:
  - name: image
@@ -73,6 +73,6 @@ jobs:
       OnlineUrl: $(PortalUrl)
       BrowserType: ${{ parameters.BrowserType }}
       # File location format is /s/TeamProjectName/FilePathToTestAutomationURLs.json
-      TestAutomationURLFilePath: $(Build.SourcesDirectory)\$(LocalProjectName)\Samples\$(TestUrlFileName)
+      TestAutomationURLFilePath: $(Build.SourcesDirectory)\$(PowerAppsTestAutomation)\$(TestURLs.json)
       UsePrivateMode: $(PrivateMode)
       LoginMethod: ${{ parameters.LoginMethod }}
